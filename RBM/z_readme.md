@@ -37,5 +37,5 @@ To use the gibbs sampling method to estimate the true model. Wikipedia has a gre
 * Compute the outer product of **v** and **h** and call this the positive gradient.
 * From **h**, sample a reconstruction **v'** of the visible units, then resample the hidden activations **h'** from this. (Gibbs sampling step)
 * Compute the outer product of **v'** and **h'** and call this the negative gradient.
-* Let the update to the weight matrix **W** be the positive gradient minus the negative gradient, times some learning rate: 
+* Let the update to the weight matrix **W** be the positive gradient minus the negative gradient, times some learning rate: ![Image of W improvement](https://wikimedia.org/api/rest_v1/media/math/render/svg/4af2af0b8f0522006fef96b3d8a79b007decbf44)
 * 
