@@ -25,8 +25,17 @@ After a complicated math derivation (basically bayes conversion, calculate condi
 ![Image of sigmoid function]
 (https://github.com/brucebismarck/algorithms-review/blob/master/RBM/Screen%20Shot%202017-03-06%20at%2018.55.15.png)
 
-Note that h has only two choices, {1, 0}. Therefore, the numerator is 1 when h_k is 0. A.K.A standard sigmoid function.
+![Image of sigmoid function]
+(https://github.com/brucebismarck/algorithms-review/blob/master/RBM/Screen%20Shot%202017-03-06%20at%2019.06.51.png)
+
+From these two picture, we think about to use gibbs sampling method to iteratively achieve the goal: estimate the true omega matrix which can maxmize the likelihood of P(**v**)
 
 ### From here, we connect RBM with deep learning!
+To use the gibbs sampling method to estimate the true model. Wikipedia has a great pseudo-code.
 
-
+* Take a training sample **v**, compute the probabilities of the hidden units and sample a hidden activation vector **h** from this probability distribution.
+* Compute the outer product of **v** and **h** and call this the positive gradient.
+* From **h**, sample a reconstruction **v'** of the visible units, then resample the hidden activations **h'** from this. (Gibbs sampling step)
+* Compute the outer product of **v'** and **h'** and call this the negative gradient.
+* Let the update to the weight matrix **W** be the positive gradient minus the negative gradient, times some learning rate: 
+* 
