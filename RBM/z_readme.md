@@ -31,7 +31,7 @@ After a complicated math derivation (basically bayes conversion, calculate condi
 From these two picture, we think about to use gibbs sampling method to iteratively achieve the goal: estimate the true omega matrix which can maxmize the likelihood of P(**v**)
 
 ### From here, we connect RBM with deep learning!
-To use the gibbs sampling method to estimate the true model. Wikipedia has a great pseudo-code.
+To use the gibbs sampling method to estimate the true model. Wikipedia has a great pseudo-code on the training process contrastive divergence.
 
 * Take a training sample **v**, compute the probabilities of the hidden units and sample a hidden activation vector **h** from this probability distribution.
 * Compute the outer product of **v** and **h** and call this the positive gradient.
