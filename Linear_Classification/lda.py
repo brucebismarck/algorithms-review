@@ -44,3 +44,4 @@ fda(c1,c2)
 
 c1 = np.array([[1,2,7],[4,5.5,6]],dtype = np.float32)
 c2 = np.array([[7,2.6,9],[10,11.5,12]],dtype = np.float32)
+
